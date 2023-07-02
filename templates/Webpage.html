@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <center>
+            <h1> webpage forms</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <label for="un">topic_name</label>
+                            <select name="nic" id="un">
+                                {% for to in lto %}
+
+                                    <option value="{{ to }}">{{ to.topic_name }}</option>
+
+
+                                {% endfor %}
+                            
+                        </select>
+                    
+                    </tr>
+                    <tr>
+                        <td><label for="web">name</label></td>
+                        <td><input type="text" name="web" id="web"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label for="ur">url</label></td>
+                        <td><input type="text" name="ur" id="ur"></td>
+                    </tr>
+                </table>
+                    <input type="submit">
+                
+            </form>
+        </center>
+</body>
+</html>
